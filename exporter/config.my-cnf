@@ -1,0 +1,4 @@
+[client]
+user = poc
+password = poc
+host = mysql1

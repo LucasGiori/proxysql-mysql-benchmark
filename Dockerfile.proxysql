@@ -1,0 +1,9 @@
+FROM proxysql/proxysql:latest
+
+# Copiar arquivos de configuração
+COPY conf/proxysql/proxysql.cnf /etc/proxysql.cnf
+COPY conf/proxysql/config.sql /docker-entrypoint-initdb.d/
+
+# Copiar script de entrypoint
+COPY bin/proxysql/init.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/init.sh
