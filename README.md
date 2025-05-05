@@ -25,8 +25,8 @@ docker run --rm  --name k6 --network proyx-sql-poc_backend -v "$(pwd)/benchmark:
 
 ## ProxySQL
 
-![ProxySQL](./benchmark/result/Mysql-with-proxy.png "ProxySQL")
+![ProxySQL](./benchmark/results/Mysql-with-proxy.png)
 
 ## Sem ProxySQL
 
-![ProxySQL](./benchmark/result/Mysql-without-proxy.png "ProxySQL")
+![ProxySQL](./benchmark/results/Mysql-without-proxy.png)
