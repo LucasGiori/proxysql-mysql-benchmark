@@ -20,3 +20,13 @@ Execute K6 test
 docker run --rm  --name k6 --network proyx-sql-poc_backend -v "$(pwd)/benchmark:/test" grafana/k6 run /test/loadtest.js
 docker run --rm  --name k6 --network proyx-sql-poc_backend -v "$(pwd)/benchmark:/test" grafana/k6 run /test/loadtest-with-proxy.js
 ```
+
+## Resultado
+
+## ProxySQL
+
+![ProxySQL](./benchmark/result/Mysql-with-proxy.png "ProxySQL")
+
+## Sem ProxySQL
+
+![ProxySQL](./benchmark/result/Mysql-without-proxy.png "ProxySQL")

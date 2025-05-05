@@ -161,8 +161,33 @@ services:
     volumes:
       - ./simple-api:/var/www/html
       - ./simple-api/logs:/var/www/html/logs
-    mem_limit: 1g
-    cpus: 1.0
+    mem_limit: 512m
+    cpus: 0.5
+  
+  api-replica-1:
+    container_name: api-replica-1
+    build:
+      context: .
+      dockerfile: ./simple-api/Dockerfile.php
+    networks:
+      - backend
+    volumes:
+      - ./simple-api:/var/www/html
+    mem_limit: 512m
+    cpus: 0.5
+
+  api-replica-2:
+    container_name: api-replica-2
+    build:
+      context: .
+      dockerfile: ./simple-api/Dockerfile.php
+    networks:
+      - backend
+    volumes:
+      - ./simple-api:/var/www/html
+    mem_limit: 512m
+    cpus: 0.5
+
 
 networks:
   backend:

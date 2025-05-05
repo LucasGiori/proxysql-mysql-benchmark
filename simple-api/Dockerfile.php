@@ -11,6 +11,8 @@ COPY . /var/www/html
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+COPY ./simple-api/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+
 WORKDIR /var/www/html
 
 EXPOSE 9000
